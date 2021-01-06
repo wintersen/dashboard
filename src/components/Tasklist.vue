@@ -5,7 +5,7 @@
     <div class="list">
       <v-checkbox v-for="(task,i) in this.$store.state.tasks" :key="i" v-model="task.status" :label="`${task.name}`" @click="markTask(task.id)"></v-checkbox>
     </div>
-    <v-text-field v-model="newTask" label="Type in new task" append-outer-icon="mdi-plus" @click:append-outer="addNewTask()"></v-text-field>
+    <v-text-field  v-model="newTask" label="Type in new task" append-outer-icon="mdi-plus" @click:append-outer="addNewTask()"></v-text-field>
   </div>
 </template>
 

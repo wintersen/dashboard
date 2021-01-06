@@ -30,7 +30,11 @@
       </section>
       <h2>Thoughts</h2>
       <section>
-        <p></p>
+        <p>Setting up and using Vuex is simple and straightforward, but it's real benefits can't be felt unless it's used in an appropriately-sized application.  
+          This exercise also made me appreciate how much easier using a framework like Bootstrap makes handling responsiveness--though it isn't difficult to start 
+          using flexbox, it does take a bit longer when not using a prebuilt grid system.  This project also helped me realize how important mobile-first approaches 
+          are; it's much easier to take the minimized design appropriate for a small device and scale it up and scale a design down.
+        </p>
       </section>
     </div>
   </div>

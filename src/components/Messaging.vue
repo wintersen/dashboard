@@ -25,6 +25,7 @@
         </div>
       </div>
     </div>
+    <v-btn block outlined color="primary">Compose Message</v-btn>
   </div>
 </template>
 
@@ -72,6 +73,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  margin-bottom: 10px;
   border: solid 1px black;
   border-radius:  0 0 10px 10px;
   background-color: #ECEFF1;

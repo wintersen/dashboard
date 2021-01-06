@@ -10,9 +10,11 @@ export default new Vuex.Store({
     tasks: [{id:0, name: 'Be a good citizen', status: false},
     {id:1, name: 'Observe neighbors', status: false},
     {id:2, name: 'Perform daily rituals', status: false},
-    {id:3, name: 'Buy items of various worth', status: false},],
+    {id:3, name: 'Buy items of various worth', status: false},
+    {id:3, name: 'Call your mother', status: false},
+    {id:3, name: 'Turn yourself into the authorities', status: false},],
     messages: [
-      {id: 0, title: 'IMPORTANT NOTIFICATION', from: 'The Government', body: 'Wanted felon BOB JOHNSON has been identified as one of your acquaintances. An agent will arrive between the hours of 1PM and 3PM to obtain your information and testimony. If you fail to appear, you will be labelled as an accomplice.', wasRead: false, important: true},
+      {id: 0, title: 'IMPORTANT NOTICE', from: 'Big Brother', body: 'Wanted felon BOB JOHNSON has been identified as one of your acquaintances. An agent will arrive between the hours of 1PM and 3PM to obtain your information and testimony. If you fail to appear, you will be labelled as an accomplice.', wasRead: false, important: true},
       {id: 1, title: 'Weekly Community Update', from: 'Pristine Place HOA', body: 'Garage Sales in your area! Gardening tips to keep your lawn perfect! New gossip about neighbors!', wasRead: false, important: false},
       {id: 2, title: 'Pls respond asap', from: 'Bob Johnson', body: 'They\'re coming there\'s no time you need to message me back', wasRead: false, important: false},
       {id: 3, title: 'Order 281634 has shipped', from: 'Amazoon', body: 'Dear Amazoon customer, your order (ID 281634) BIG POPPAS BIG BOOMSTICK has shipped successfully.  This package will require a show of personal id and signature upon delivery.  Thank you for picking Amazoon, your only choice in online shopping!', wasRead: true, important: false},
