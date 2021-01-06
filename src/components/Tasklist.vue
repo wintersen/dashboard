@@ -5,19 +5,22 @@
     <div class="list">
       <v-checkbox v-for="(task,i) in this.$store.state.tasks" :key="i" v-model="task.status" :label="`${task.name}`" @click="markTask(task.id)"></v-checkbox>
     </div>
-    
-    </div>
+    <v-text-field v-model="newTask" label="Type in new task" append-outer-icon="mdi-plus" @click:append-outer="addNewTask()"></v-text-field>
+  </div>
 </template>
 
 <script>
 export default {
   name:'Tasklist',
   data: ()=> ({
-
+    newTask: ''
   }),
   methods: {
     markTask(id){
-      this.$store.commit('markTask', id)
+      this.$store.commit('markTask', id);
+    },
+    addNewTask(){
+      this.$store.commit('addTask', this.newTask);
     }
   }
 }
@@ -30,5 +33,11 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  
+  .list{
+    overflow-x: auto;
+  }
 }
+
 </style>

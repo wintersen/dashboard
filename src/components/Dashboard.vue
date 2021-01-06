@@ -23,10 +23,10 @@
         <Tasklist/>
       </div>
       <div class="messaging">
-mes
+        <Messaging/>
       </div>
       <div class="widgets">
-wjhd
+        <Widgets/>
       </div>
     </div>
     </div>
@@ -35,11 +35,16 @@ wjhd
 
 <script>
 import Tasklist from './Tasklist';
+import Messaging from './Messaging';
+import Widgets from './Widgets';
 
 export default {
   name: "Dashboard",
-  components: {Tasklist},
-  data: () =>({
+  components: {Tasklist,
+  Messaging,
+  Widgets},
+  data: () =>
+    Messaging({
 
   }),
   methods: {
@@ -51,14 +56,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container{
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  background-color: gray;
+  background-color: #CFD8DC;
 }
 .header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .maininfo{
@@ -90,26 +96,85 @@ export default {
 
 .content{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-items: center;
 
     .tasklist{
       background-color: white;
-      margin: 10px 10px 0 0;
-      flex: 1;
       padding: 10px;
+      margin-bottom: 10px;
     }
     .messaging{
       background-color: white;
-      margin: 10px;
-      flex: 3;
       padding: 10px;
+      margin-bottom: 10px;
     }
     .widgets{
       background-color: white;
-      margin: 10px 0 0 10px;
-      flex: 1;
+      
+
       padding: 10px;
     }
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) {
+  .widgets{
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) {
+  .content{
+  height: 70vh;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  .tasklist{
+    margin: 10px 10px 0 0;
+  }
+  
+  .messaging{
+    margin: 10px 10px 0 10px;
+  }
+}
+
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) { 
+  .content{
+    height: 80vh;
+    flex-wrap: nowrap;
+    align-items: stretch;
+
+    .tasklist{
+      flex: 1;
+    }
+    
+    .messaging{
+      flex: 2;
+    }
+  }
+
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1200px) {
+.content{
+  height: 75vh;
+  flex-wrap: nowrap;
+}
+.widgets{
+  display: flex;
+  flex: 1;
+  margin: 10px 0 0 10px;
+}
 }
 </style>

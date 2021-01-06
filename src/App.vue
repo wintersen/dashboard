@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <v-main>
-      <ProjSummary v-show="this.$store.state.projSum"/>
+      <transition name="fade">
+      <ProjSummary v-show="this.$store.state.projSum"/></transition>
       <Dashboard/>
     </v-main>
   </v-app>
@@ -30,3 +31,12 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: transform .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-100vh);
+}
+</style>
