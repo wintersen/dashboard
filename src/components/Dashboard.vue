@@ -19,8 +19,8 @@
       </div>
     </div>
     <div class="content">
-      <div class="taskbar">
-tas
+      <div class="tasklist">
+        <Tasklist/>
       </div>
       <div class="messaging">
 mes
@@ -29,12 +29,16 @@ mes
 wjhd
       </div>
     </div>
-  </div>
+    </div>
+
 </template>
 
 <script>
+import Tasklist from './Tasklist';
+
 export default {
   name: "Dashboard",
+  components: {Tasklist},
   data: () =>({
 
   }),
@@ -89,20 +93,23 @@ export default {
   flex-direction: row;
   justify-items: center;
 
-    .taskbar{
+    .tasklist{
       background-color: white;
       margin: 10px 10px 0 0;
       flex: 1;
+      padding: 10px;
     }
     .messaging{
       background-color: white;
       margin: 10px;
       flex: 3;
+      padding: 10px;
     }
     .widgets{
       background-color: white;
       margin: 10px 0 0 10px;
       flex: 1;
+      padding: 10px;
     }
 }
 </style>
