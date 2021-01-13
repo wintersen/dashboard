@@ -12,7 +12,7 @@ export default new Vuex.Store({
     {id:2, name: 'Perform daily rituals', status: false},
     {id:3, name: 'Buy items of various worth', status: false},
     {id:3, name: 'Call your mother', status: false},
-    {id:3, name: 'Turn yourself into the authorities', status: false},],
+    {id:3, name: 'Turn yourself in to the authorities', status: false},],
     messages: [
       {id: 0, title: 'IMPORTANT NOTICE', from: 'Big Brother', body: 'Wanted felon BOB JOHNSON has been identified as one of your acquaintances. An agent will arrive between the hours of 1PM and 3PM to obtain your information and testimony. If you fail to appear, you will be labelled as an accomplice.', wasRead: false, important: true},
       {id: 1, title: 'Weekly Community Update', from: 'Pristine Place HOA', body: 'Garage Sales in your area! Gardening tips to keep your lawn perfect! New gossip about neighbors!', wasRead: false, important: false},
